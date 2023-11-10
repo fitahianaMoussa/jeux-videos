@@ -13,7 +13,7 @@ const GameGrid = ({gameQuery} :Props) => {
   return (
     <>
       {error && <Text>{error}</Text>}
-      <SimpleGrid columns={3} spacing={3} padding="10px">
+      <SimpleGrid columns={3} spacing={6} padding="10px">
         {isLoading && skeleton.map((sk) => <GameCardSkeleton key={sk} />)}
         {data.map((game) => (
           <GameCard key={game.id} game={game} />
